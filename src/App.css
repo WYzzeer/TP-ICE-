@@ -1,0 +1,67 @@
+body {
+  background-color: #192734;
+  font-family: 'Arial', sans-serif;
+}
+
+.App {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.App-header {
+  background-color: #15202b;
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.post-box {
+  width: 100%; /* Largeur à 100% pour s'adapter à la largeur du conteneur principal */
+  background-color: #192734;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.post-input {
+  width: 100%; /* Largeur à 100% pour s'adapter à la largeur du conteneur principal */
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.post-button {
+  width: 100%; /* Largeur à 100% pour s'adapter à la largeur du conteneur principal */
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-button:hover {
+  background-color: #0e7ec5;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
