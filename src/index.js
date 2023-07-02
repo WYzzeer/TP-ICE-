@@ -7,10 +7,10 @@ import { Web3Provider } from '@ethersproject/providers';
 import { Contract } from '@ethersproject/contracts';
 import { ethers } from 'ethers';
 
+const config = require('./config.json');
 
-//const contractAddress = "0xF559EE9920545878a3E62BEC1734A858CBFf7Fde";
-const contractAddress = "0xdA9fb2D72DcbB9eDb69691477bD3848EC3DF4d5b";
-const contractABI = [{"inputs":[{"internalType":"uint256","name":"_id_post","type":"uint256"},{"internalType":"string","name":"_comment","type":"string"}],"name":"CommentPost","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_content","type":"string"}],"name":"SendPost","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_id_post","type":"uint256"}],"name":"getCommentCreators","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"},{"internalType":"address[]","name":"","type":"address[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_id_post","type":"uint256"}],"name":"getComments","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"},{"internalType":"string[]","name":"","type":"string[]"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getPost","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"},{"internalType":"string[]","name":"","type":"string[]"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getPostCreators","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"},{"internalType":"address[]","name":"","type":"address[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_id_post","type":"uint256"}],"name":"getPostRewards","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_id_post","type":"uint256"}],"name":"reward","outputs":[],"stateMutability":"payable","type":"function"}];
+const contractAddress = config.contractAddress;
+const contractABI = config.contractABI;
 
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let signer = provider.getSigner();

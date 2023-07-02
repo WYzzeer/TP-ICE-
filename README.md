@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Social Blockchain
+Social Blockchain est un projet qui intègre les technologies Blockchain avec React pour créer une plateforme sociale décentralisée. Les utilisateurs peuvent créer des posts, commenter sur des posts et récompenser les posts en utilisant des ethers. Le projet utilise la bibliothèque ethers.js pour interagir avec le contrat intelligent déployé sur la blockchain Ethereum.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Configuration
+Avant de démarrer le projet, vous devez configurer certains paramètres. Un fichier config.json est utilisé pour cela. Le fichier config.json doit contenir l'adresse du contrat intelligent déployé et l'ABI du contrat. Vous pouvez trouver un exemple de config.json ci-dessous :
 
-## Available Scripts
+json
+```{
+    "contractAddress": "0xdA9fb2D72DcbB9eDb69691477bD3848EC3DF4abc",
+    "contractABI": [...]
+}```
+Remplacez 0xdA9fb2D72DcbB9eDb69691477bD3848EC3DF4abc avec l'adresse du contrat déployé et [...] avec l'ABI du contrat.
 
-In the project directory, you can run:
+## Installation des dépendances
+Pour installer toutes les dépendances, vous devez exécuter la commande npm install dans le répertoire du projet. Assurez-vous que vous avez déjà installé Node.js et npm sur votre système.
 
-### `npm start`
+bash
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```npm install```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Lancement du projet
+Une fois toutes les dépendances installées, vous pouvez lancer le projet en exécutant la commande npm start.
 
-### `npm test`
+bash
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```npm start```
+Cela lancera l'application dans le mode de développement. Ouvrez http://localhost:3000 pour le voir dans le navigateur. La page sera rechargée si vous faites des modifications. Vous verrez également les erreurs de peluches dans la console.
 
-### `npm run build`
+Note: Assurez-vous d'avoir une extension de portefeuille Ethereum (comme MetaMask) installée sur votre navigateur et connectée à un réseau Ethereum (testnet/mainnet) pour interagir avec l'application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Documentation
+Les utilisateurs peuvent utiliser l'application pour créer des posts, commenter sur des posts et récompenser les posts en utilisant des ethers. Pour utiliser ces fonctionnalités, les utilisateurs doivent interagir avec les champs de saisie et les boutons sur l'interface utilisateur.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Le code est bien documenté avec des commentaires pour comprendre le flux de données et les interactions avec la blockchain.
