@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Post from './Post';
 import './App.css';
 
-function App({ sendPost, fetchPosts, fetchComments, sendComment, rewardPost, getCommentCreator, getPostCreator, getPostReward }) {
+function App({ contract, sendPost, fetchPosts, fetchComments, sendComment, rewardPost, getCommentCreator, getPostCreator, getPostReward }) {
   const [postContent, setPostContent] = useState('');
   const [posts, setPosts] = useState([]);
   const [postId, setPostId] = useState('');

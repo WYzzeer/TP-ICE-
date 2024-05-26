@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Web3Provider } from '@ethersproject/providers';
-import { Contract } from '@ethersproject/contracts';
 import { ethers } from 'ethers';
 
 const config = require('./config.json');
@@ -12,9 +10,12 @@ const config = require('./config.json');
 const contractAddress = config.contractAddress;
 const contractABI = config.contractABI;
 
+window.ethereum.enable()
+
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let signer = provider.getSigner();
 let contract = new ethers.Contract(contractAddress, contractABI, signer);
+console.log(contract)
 
 async function requestAccount() {
   await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -160,6 +161,7 @@ window.sendPost = sendPost; // définir sendPost comme une fonction globale
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App 
+    contract={contract}
       sendPost={sendPost}
       fetchPosts={fetchPosts}
       fetchComments={fetchComments}
